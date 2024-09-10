@@ -1,0 +1,616 @@
+/* General Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #0a0a16;
+  color: #8b8888;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+}
+
+button {
+  cursor: pointer;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  background-color: #6c63ff;
+  color: white;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #554cd1;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem; /* Adjusted padding */
+  background-color: #111122;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.header h1 {
+  font-size: 1.8rem; /* Adjusted font size */
+  color: #6c63ff;
+}
+
+/* Navigation menu */
+.header nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+.header nav ul li {
+  margin: 0;
+}
+
+.header nav ul li a {
+  font-size: 1rem; /* Adjusted font size */
+  color: #ffffff;
+  text-decoration: none; /* Added for better appearance */
+  transition: color 0.3s ease;
+}
+
+.header nav ul li a:hover {
+  color: #6c63ff;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 1rem; /* Consistent padding on smaller screens */
+  }
+
+  .header h1 {
+    font-size: 1.5rem; /* Adjusted font size */
+    margin-bottom: 1rem; /* Added margin for spacing */
+  }
+
+  .header nav ul {
+    flex-direction: column;
+    gap: 1rem; /* Increased gap for vertical spacing */
+    width: 100%; /* Full width to fit the container */
+  }
+
+  .header nav ul li {
+    width: 100%;
+    text-align: center; /* Center align links */
+  }
+}
+
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 1.2rem; /* Further reduced font size */
+  }
+
+  .header nav ul li a {
+    font-size: 0.9rem; /* Reduced font size */
+  }
+}
+
+/* Hero Section */
+.hero {
+  background-color: #060614;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 3rem 0;
+}
+
+.hero-content {
+  max-width: 600px;
+  margin-left: 30px;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  color: #ffffff;
+}
+
+.hero h2 {
+  font-size: 1.5rem;
+  color: #6c63ff;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #cccccc;
+  margin: 1.5rem 0;
+}
+
+.underline {
+  width: 60px;
+  height: 2px;
+  background-color: #9b5cfb; /* Accent color */
+  margin: 20px 0;
+}
+
+.hero button {
+  margin: 0.5rem;
+  background-color: transparent;
+  color: white;
+  padding: 10px 20px;
+  border: 2px dotted white;
+  border-radius: 5px;
+  width: 150px;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 16px;
+}
+.hero button:hover {
+  background-color: #6c63ff;
+  color: black;
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center; /* Center image horizontally */
+  align-items: center;
+  margin-top: 20px; /* Add space between content and image */
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 15px;
+  box-shadow: 0 0 50px rgba(155, 92, 251, 0.4); /* Soft glow effect */
+}
+
+/* Social Media Section */
+.social-media {
+  margin-top: 500px;
+  margin-right: 20px;
+  text-align: center;
+  color: #888;
+}
+
+.social-media p {
+  font-size: 16px;
+}
+
+.social-media .icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-media a {
+  color: #9b5cfb;
+  font-size: 24px;
+  transition: all 0.3s ease;
+}
+
+.social-media a:hover {
+  color: #fff;
+  transform: scale(1.4);
+}
+
+/* Services Section */
+.services {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.services h4 {
+  font-size: 1.2rem;
+  color: #555;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.services h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.services-carousel .legend {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.7
+  ); /* Transparent background for the text */
+  color: #fff;
+  padding: 10px;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.services-carousel img {
+  max-height: 200px; /* Ensure the images don't become too large */
+  object-fit: contain; /* Maintain aspect ratio and crop if necessary */
+}
+
+/*Stats Section */
+.stats-section {
+  background-size: cover;
+  padding: 60px 0;
+}
+
+.stats-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.stat-box {
+  width: 200px;
+  height: 200px;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+  border: 2px dotted #fff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  transition: transform 0.3s ease; /* Animation for zoom effect */
+}
+
+.stat-box h2 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.stat-box p {
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+/* Zoom in and out on hover */
+.stat-box:hover {
+  transform: scale(1.1); /* Increase size on hover */
+}
+
+/* Projects Section */
+.projects {
+  padding: 5rem 0;
+  background-color: #060614;
+  text-align: center;
+}
+
+.projects h2 {
+  font-size: 2rem;
+  color: #ffffff;
+  margin-bottom: 3rem;
+}
+
+/* Grid layout for the list of projects */
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+/* Individual project card */
+.project-item {
+  display: flex;
+  align-items: center;
+  background-color: #1a1a33;
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 1200;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
+}
+
+.project-item:hover {
+  transform: translateY(-10px);
+}
+
+/* Image section for the project */
+.project-image img {
+  width: 200px; /* Adjust this value to your preference */
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Project details section */
+.project-details {
+  flex: 1;
+  margin-left: 1.5rem;
+  text-align: left;
+}
+
+.project-details h3 {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.view-details {
+  background-color: #6c63ff;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: none;
+  margin-top: 1rem;
+}
+
+.view-details:hover {
+  background-color: #564ff4;
+}
+
+/* Flexbox ensures the layout of image and details */
+.project-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .project-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .project-details {
+    margin-left: 0;
+  }
+
+  .project-image img {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Why Hire Me Section */
+.hire-me {
+  text-align: center;
+  padding: 50px 0;
+  background-color: #060614;
+}
+
+.hire-me h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.qualities {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.quality {
+  text-align: center;
+  width: 200px;
+  margin: 20px;
+}
+
+.quality h3 {
+  font-size: 1.5rem;
+  margin-top: 15px;
+}
+
+.quality p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.icon {
+  font-size: 2rem;
+  color: #2d89e5;
+}
+
+/* Testimonials Section */
+.testimonials {
+  text-align: center;
+  margin: 50px 0;
+  padding-top: 20px;
+  background-color: #060614;
+}
+
+.testimonials h4 {
+  font-size: 1.2rem;
+  color: #999;
+}
+
+.testimonials h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.testimonial-item {
+  padding: 20px;
+}
+
+.client-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+.testimonial-item h3 {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+.testimonial-item h4 {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.testimonial-item p {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Skills Section */
+.skills {
+  text-align: center;
+  padding: 2rem;
+  background-color: #101027;
+}
+.skills h2 {
+  margin-bottom: 30px;
+}
+.skills-list {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.skills-list img {
+  width: 100px; /* Adjust the size as needed */
+  height: 100px;
+  padding: 20px; /* Add padding for the background box */
+  background-color: #7e89bd; /* Light grey background */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(252, 251, 251, 0.1); /* Optional: add some shadow for depth */
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.skills-list img:hover {
+  transform: scale(1.5);
+}
+
+/* Contact Section */
+
+.contact-section {
+  padding: 2rem;
+  background-color: #060614;
+  color: #fff;
+  text-align: left;
+  align-items: left;
+}
+.contact-section h2 {
+  margin-bottom: 20px;
+}
+
+.contact-details {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  gap: 1.5rem;
+}
+
+.contact-item {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.contact-item svg {
+  color: #8a2be2; /* Customize the icon color */
+}
+
+/* Responsive Styling */
+@media screen and (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .hero-content {
+    margin-left: 0;
+    max-width: 100%; /* Allow hero content to take full width */
+  }
+
+  .hero h1 {
+    font-size: 2.2rem; /* Adjust heading size */
+  }
+
+  .hero h2 {
+    font-size: 1.3rem; /* Adjust subheading size */
+  }
+
+  .hero p {
+    font-size: 1rem; /* Adjust paragraph font size */
+  }
+
+  .hero button {
+    width: 100%; /* Buttons will now stretch to the width */
+    max-width: 200px; /* Limit max width on smaller screens */
+  }
+
+  .hero-image img {
+    max-width: 200px; /* Scale down image */
+  }
+
+  .social-media {
+    margin-top: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.8rem; /* Further reduce text size for smaller screens */
+  }
+
+  .hero h2 {
+    font-size: 1.1rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  .hero-image img {
+    max-width: 150px; /* Scale down the image further */
+  }
+
+  .hero button {
+    max-width: 180px;
+  }
+
+  .social-media {
+    margin-top: 1rem;
+  }
+}

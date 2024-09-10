@@ -1,0 +1,39 @@
+{
+  "name": "react-dev-tools-in-sandbox",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "main": "src/index.js",
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "6.6.0",
+    "@fortawesome/free-brands-svg-icons": "6.6.0",
+    "@fortawesome/free-solid-svg-icons": "6.6.0",
+    "@fortawesome/react-fontawesome": "0.2.2",
+    "custom-react-slick": "0.14.11",
+    "n": "10.0.0",
+    "npm": "10.8.3",
+    "npm-install-checks": "7.0.0",
+    "react": "18.3.1",
+    "react-devtools-core": "3.6.3",
+    "react-dom": "18.3.1",
+    "react-responsive-carousel": "3.2.23",
+    "react-slick": "0.30.2",
+    "slick-carousel": "1.8.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.1",
+    "typescript": "3.3.3",
+    "vite": "^5.4.3"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
